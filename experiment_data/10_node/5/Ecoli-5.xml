@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:jigcell="http://www.sbml.org/2001/ns/jigcell" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sbml="http://www.sbml.org/sbml/level2" xmlns:xlink="http://www.w3.org/1999/xlink" level="2" version="1">
+  <model name="Ecoli-5">
+<notes><p xmlns="http://www.w3.org/1999/xhtml"></p></notes>
+    <listOfCompartments>
+      <compartment id="cell" name="cell" size="1.0" />
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="nuoB" name="nuoB" compartment="cell" />
+      <species id="narL" name="narL" compartment="cell" />
+      <species id="ogt" name="ogt" compartment="cell" />
+      <species id="torA" name="torA" compartment="cell" />
+      <species id="hybA" name="hybA" compartment="cell" />
+      <species id="ynfF" name="ynfF" compartment="cell" />
+      <species id="hybC" name="hybC" compartment="cell" />
+      <species id="hybO" name="hybO" compartment="cell" />
+      <species id="hybB" name="hybB" compartment="cell" />
+      <species id="torC" name="torC" compartment="cell" />
+      <species id="_void_" name="_void_" compartment="cell" initialAmount="0.0" boundaryCondition="true" constant="true" />
+    </listOfSpecies>
+    <listOfReactions>
+      <reaction id="nuoB_synthesis" name="nuoB_synthesis: (1)" reversible="false">
+        <listOfReactants>
+          <speciesReference species="_void_" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="nuoB" />
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="narL" />
+        </listOfModifiers>
+        <kineticLaw>
+          <listOfParameters>
+            <parameter id="max" name="max" value="0.027514746553329292" />
+            <parameter id="deltaProtein" name="deltaProtein" value="0.020247902163076946" />
+            <parameter id="maxTranslation" name="maxTranslation" value="0.020247902163076946" />
+            <parameter id="bindsAsComplex_1" name="bindsAsComplex_1" value="0.0" />
+            <parameter id="numActivators_1" name="numActivators_1" value="1.0" />
+            <parameter id="numDeactivators_1" name="numDeactivators_1" value="0.0" />
+            <parameter id="a_0" name="a_0" value="0.02965038705304773" />
+            <parameter id="a_1" name="a_1" value="1.0" />
+            <parameter id="k_1" name="k_1" value="0.24508512867381796" />
+            <parameter id="n_1" name="n_1" value="1.6183808394677015" />
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="nuoB_degradation" name="nuoB_degradation" reversible="false">
+        <listOfReactants>
+          <speciesReference species="nuoB" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="_void_" />
+        </listOfProducts>
+        <kineticLaw>
+          <listOfParameters>
+            <parameter id="delta" name="delta" value="0.027514746553329292" />
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="narL_synthesis" name="narL_synthesis: no inputs" reversible="false">
+        <listOfReactants>
+          <speciesReference species="_void_" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="narL" />
+        </listOfProducts>
+        <kineticLaw>
+          <listOfParameters>
+            <parameter id="max" name="max" value="0.022442497487485138" />
+            <parameter id="deltaProtein" name="deltaProtein" value="0.02137832280387753" />
+            <parameter id="maxTranslation" name="maxTranslation" value="0.02137832280387753" />
+            <parameter id="a_0" name="a_0" value="1.0" />
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="narL_degradation" name="narL_degradation" reversible="false">
+        <listOfReactants>
+          <speciesReference species="narL" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="_void_" />
+        </listOfProducts>
+        <kineticLaw>
+          <listOfParameters>
+            <parameter id="delta" name="delta" value="0.022442497487485138" />
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="ogt_synthesis" name="ogt_synthesis: (1)" reversible="false">
+        <listOfReactants>
+          <speciesReference species="_void_" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ogt" />
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="narL" />
+        </listOfModifiers>
+        <kineticLaw>
+          <listOfParameters>
+            <parameter id="max" name="max" value="0.024042621600730636" />
+            <parameter id="deltaProtein" name="deltaProtein" value="0.045853700877551376" />
+            <parameter id="maxTranslation" name="maxTranslation" value="0.045853700877551376" />
+            <parameter id="bindsAsComplex_1" name="bindsAsComplex_1" value="0.0" />
+            <parameter id="numActivators_1" name="numActivators_1" value="1.0" />
+            <parameter id="numDeactivators_1" name="numDeactivators_1" value="0.0" />
+            <parameter id="a_0" name="a_0" value="0.020895515967967897" />
+            <parameter id="a_1" name="a_1" value="1.0" />
+            <parameter id="k_1" name="k_1" value="0.588710817405954" />
+            <parameter id="n_1" name="n_1" value="1.3267486015074148" />
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="ogt_degradation" name="ogt_degradation" reversible="false">
+        <listOfReactants>
+          <speciesReference species="ogt" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="_void_" />
+        </listOfProducts>
+        <kineticLaw>
+          <listOfParameters>
+            <parameter id="delta" name="delta" value="0.024042621600730636" />
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="torA_synthesis" name="torA_synthesis: ~(1)" reversible="false">
+        <listOfReactants>
+          <speciesReference species="_void_" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="torA" />
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="narL" />
+        </listOfModifiers>
+        <kineticLaw>
+          <listOfParameters>
+            <parameter id="max" name="max" value="0.02558449193440901" />
+            <parameter id="deltaProtein" name="deltaProtein" value="0.02743991297467782" />
+            <parameter id="maxTranslation" name="maxTranslation" value="0.02743991297467782" />
+            <parameter id="bindsAsComplex_1" name="bindsAsComplex_1" value="0.0" />
+            <parameter id="numActivators_1" name="numActivators_1" value="1.0" />
+            <parameter id="numDeactivators_1" name="numDeactivators_1" value="0.0" />
+            <parameter id="a_0" name="a_0" value="1.0" />
+            <parameter id="a_1" name="a_1" value="0.099701731482007" />
+            <parameter id="k_1" name="k_1" value="0.8594265176914633" />
+            <parameter id="n_1" name="n_1" value="2.5758302611949424" />
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="torA_degradation" name="torA_degradation" reversible="false">
+        <listOfReactants>
+          <speciesReference species="torA" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="_void_" />
+        </listOfProducts>
+        <kineticLaw>
+          <listOfParameters>
+            <parameter id="delta" name="delta" value="0.02558449193440901" />
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="hybA_synthesis" name="hybA_synthesis: ~(1)" reversible="false">
+        <listOfReactants>
+          <speciesReference species="_void_" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="hybA" />
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="narL" />
+        </listOfModifiers>
+        <kineticLaw>
+          <listOfParameters>
+            <parameter id="max" name="max" value="0.02841737838756035" />
+            <parameter id="deltaProtein" name="deltaProtein" value="0.026736910354985974" />
+            <parameter id="maxTranslation" name="maxTranslation" value="0.026736910354985974" />
+            <parameter id="bindsAsComplex_1" name="bindsAsComplex_1" value="0.0" />
+            <parameter id="numActivators_1" name="numActivators_1" value="1.0" />
+            <parameter id="numDeactivators_1" name="numDeactivators_1" value="0.0" />
+            <parameter id="a_0" name="a_0" value="1.0" />
+            <parameter id="a_1" name="a_1" value="0.0013844212772963216" />
+            <parameter id="k_1" name="k_1" value="0.7092693555750884" />
+            <parameter id="n_1" name="n_1" value="1.3517729125857243" />
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="hybA_degradation" name="hybA_degradation" reversible="false">
+        <listOfReactants>
+          <speciesReference species="hybA" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="_void_" />
+        </listOfProducts>
+        <kineticLaw>
+          <listOfParameters>
+            <parameter id="delta" name="delta" value="0.02841737838756035" />
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="ynfF_synthesis" name="ynfF_synthesis: ~(1)" reversible="false">
+        <listOfReactants>
+          <speciesReference species="_void_" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ynfF" />
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="narL" />
+        </listOfModifiers>
+        <kineticLaw>
+          <listOfParameters>
+            <parameter id="max" name="max" value="0.026600637754721216" />
+            <parameter id="deltaProtein" name="deltaProtein" value="0.022230560863637342" />
+            <parameter id="maxTranslation" name="maxTranslation" value="0.022230560863637342" />
+            <parameter id="bindsAsComplex_1" name="bindsAsComplex_1" value="0.0" />
+            <parameter id="numActivators_1" name="numActivators_1" value="1.0" />
+            <parameter id="numDeactivators_1" name="numDeactivators_1" value="0.0" />
+            <parameter id="a_0" name="a_0" value="1.0" />
+            <parameter id="a_1" name="a_1" value="0.16798224794676764" />
+            <parameter id="k_1" name="k_1" value="0.4329521174938418" />
+            <parameter id="n_1" name="n_1" value="1.5991737507839001" />
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="ynfF_degradation" name="ynfF_degradation" reversible="false">
+        <listOfReactants>
+          <speciesReference species="ynfF" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="_void_" />
+        </listOfProducts>
+        <kineticLaw>
+          <listOfParameters>
+            <parameter id="delta" name="delta" value="0.026600637754721216" />
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="hybC_synthesis" name="hybC_synthesis: ~(1)" reversible="false">
+        <listOfReactants>
+          <speciesReference species="_void_" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="hybC" />
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="narL" />
+        </listOfModifiers>
+        <kineticLaw>
+          <listOfParameters>
+            <parameter id="max" name="max" value="0.04252498607708868" />
+            <parameter id="deltaProtein" name="deltaProtein" value="0.02055674386474268" />
+            <parameter id="maxTranslation" name="maxTranslation" value="0.02055674386474268" />
+            <parameter id="bindsAsComplex_1" name="bindsAsComplex_1" value="0.0" />
+            <parameter id="numActivators_1" name="numActivators_1" value="1.0" />
+            <parameter id="numDeactivators_1" name="numDeactivators_1" value="0.0" />
+            <parameter id="a_0" name="a_0" value="1.0" />
+            <parameter id="a_1" name="a_1" value="0.024372131985788914" />
+            <parameter id="k_1" name="k_1" value="0.0865097183221951" />
+            <parameter id="n_1" name="n_1" value="4.741194239590693" />
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="hybC_degradation" name="hybC_degradation" reversible="false">
+        <listOfReactants>
+          <speciesReference species="hybC" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="_void_" />
+        </listOfProducts>
+        <kineticLaw>
+          <listOfParameters>
+            <parameter id="delta" name="delta" value="0.04252498607708868" />
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="hybO_synthesis" name="hybO_synthesis: ~(1)" reversible="false">
+        <listOfReactants>
+          <speciesReference species="_void_" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="hybO" />
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="narL" />
+        </listOfModifiers>
+        <kineticLaw>
+          <listOfParameters>
+            <parameter id="max" name="max" value="0.04625211695106074" />
+            <parameter id="deltaProtein" name="deltaProtein" value="0.02658194445106063" />
+            <parameter id="maxTranslation" name="maxTranslation" value="0.02658194445106063" />
+            <parameter id="bindsAsComplex_1" name="bindsAsComplex_1" value="1.0" />
+            <parameter id="numActivators_1" name="numActivators_1" value="1.0" />
+            <parameter id="numDeactivators_1" name="numDeactivators_1" value="0.0" />
+            <parameter id="a_0" name="a_0" value="1.0" />
+            <parameter id="a_1" name="a_1" value="0.06323762721104131" />
+            <parameter id="k_1" name="k_1" value="0.8768695418769493" />
+            <parameter id="n_1" name="n_1" value="2.342587804766336" />
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="hybO_degradation" name="hybO_degradation" reversible="false">
+        <listOfReactants>
+          <speciesReference species="hybO" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="_void_" />
+        </listOfProducts>
+        <kineticLaw>
+          <listOfParameters>
+            <parameter id="delta" name="delta" value="0.04625211695106074" />
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="hybB_synthesis" name="hybB_synthesis: ~(1)" reversible="false">
+        <listOfReactants>
+          <speciesReference species="_void_" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="hybB" />
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="narL" />
+        </listOfModifiers>
+        <kineticLaw>
+          <listOfParameters>
+            <parameter id="max" name="max" value="0.02604079895373346" />
+            <parameter id="deltaProtein" name="deltaProtein" value="0.04555560427562578" />
+            <parameter id="maxTranslation" name="maxTranslation" value="0.04555560427562578" />
+            <parameter id="bindsAsComplex_1" name="bindsAsComplex_1" value="0.0" />
+            <parameter id="numActivators_1" name="numActivators_1" value="1.0" />
+            <parameter id="numDeactivators_1" name="numDeactivators_1" value="0.0" />
+            <parameter id="a_0" name="a_0" value="1.0" />
+            <parameter id="a_1" name="a_1" value="0.07429077435608833" />
+            <parameter id="k_1" name="k_1" value="0.17485891259275377" />
+            <parameter id="n_1" name="n_1" value="6.297706161299208" />
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="hybB_degradation" name="hybB_degradation" reversible="false">
+        <listOfReactants>
+          <speciesReference species="hybB" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="_void_" />
+        </listOfProducts>
+        <kineticLaw>
+          <listOfParameters>
+            <parameter id="delta" name="delta" value="0.02604079895373346" />
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="torC_synthesis" name="torC_synthesis: ~(1)" reversible="false">
+        <listOfReactants>
+          <speciesReference species="_void_" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="torC" />
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="narL" />
+        </listOfModifiers>
+        <kineticLaw>
+          <listOfParameters>
+            <parameter id="max" name="max" value="0.039868235935018086" />
+            <parameter id="deltaProtein" name="deltaProtein" value="0.01983967417273594" />
+            <parameter id="maxTranslation" name="maxTranslation" value="0.01983967417273594" />
+            <parameter id="bindsAsComplex_1" name="bindsAsComplex_1" value="0.0" />
+            <parameter id="numActivators_1" name="numActivators_1" value="1.0" />
+            <parameter id="numDeactivators_1" name="numDeactivators_1" value="0.0" />
+            <parameter id="a_0" name="a_0" value="1.0" />
+            <parameter id="a_1" name="a_1" value="0.07164005542857443" />
+            <parameter id="k_1" name="k_1" value="0.6212784631270916" />
+            <parameter id="n_1" name="n_1" value="1.292709481556996" />
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="torC_degradation" name="torC_degradation" reversible="false">
+        <listOfReactants>
+          <speciesReference species="torC" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="_void_" />
+        </listOfProducts>
+        <kineticLaw>
+          <listOfParameters>
+            <parameter id="delta" name="delta" value="0.039868235935018086" />
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>
